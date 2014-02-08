@@ -7,8 +7,6 @@
 #include <boost/geometry/geometries/point_xy.hpp>
 #include <boost/geometry/geometries/polygon.hpp>
 
-
-
 class BBox {
 public:
 	QVector2D minPt, maxPt;
@@ -16,6 +14,8 @@ public:
 public:
 	BBox() {}
 	~BBox() {}
+
+	bool contains(const QVector2D& pt);
 };
 
 /**
