@@ -15,7 +15,11 @@ public:
 	BBox() {}
 	~BBox() {}
 
-	bool contains(const QVector2D& pt);
+	void addPoint(const QVector2D& pt);
+	bool contains(const QVector2D& pt) const;
+	QVector2D midPt() const;
+	float dx() const;
+	float dy() const;
 };
 
 /**
